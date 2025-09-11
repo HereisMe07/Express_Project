@@ -9,8 +9,8 @@ const connectDb = async () => {
             connect.connection.name
         );
     } catch {
-        console.log(err);
-        process.exit(1);
+        console.error("Database connection error:", err.message);
+        process.exit(1); // exit app if cannot connect
     }
 };
 

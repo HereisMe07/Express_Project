@@ -6,7 +6,7 @@ const connectDb = require("./config/dbConnection");
 // load environment variables from .env file
 const dotenv = require("dotenv").config();
 
-connectDb();
+connectDb(); // ✅ connect to Mongo before starting server
 const app = express();
 
 // set port from .env or use 5000 by default
@@ -21,3 +21,4 @@ app.use(errorHandler);
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
