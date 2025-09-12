@@ -4,14 +4,14 @@ const {
     getContact,
     getSingleContact,
     createContact,
-    updateContact,
+    update,
     deleteContact
 } = require("../controllers/contactController");
 
 //get all contacts
 router.route("/").get(getContact).post(createContact);;
 //get single contact by id
-router.route("/:id").get(getSingleContact).put(updateContact).delete(deleteContact);
+router.route("/:id").get(getSingleContact).put(update).delete(deleteContact);
 //post
 // router.route("/")
 //put
